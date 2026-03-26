@@ -6,8 +6,15 @@ public class HelloWorld {
             return;
         }
 
+        String result = "";
+
         for (String name : args) {
-            System.out.println("Hello, " + name + "!");
+            result += name + ", ";
         }
+
+        // Remove last comma and space
+        result = result.substring(0, result.length() - 2);
+
+        System.out.println("Hello, " + result + "!");
     }
 }
